@@ -13,17 +13,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="BroadCast Reciver"
-        android:subtitle="Airplane Mode"
-        android:background="@color/cardview_dark_background"
-        android:titleTextColor="@color/white"
-        android:subtitleTextColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-
 
     <TextView
         android:layout_margin="20dp"
