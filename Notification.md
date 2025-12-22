@@ -45,11 +45,13 @@ btn = findViewById(R.id.btnGreet);
                 builder.setLargeIcon(Icon.createWithResource(MainActivity.this, R.drawable.ic_launcher_foreground));
                 builder.setContentText("Hello " + txt.getText().toString());
                 builder.setPriority(NotificationCompat.PRIORITY_HIGH);
+
                 NotificationManagerCompat notificationManager = NotificationManagerCompat.from(MainActivity.this);
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(MainActivity.this, "Permission not granted", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 notificationManager.notify(NOTIFICATION_ID, builder.build());
             }
         });
