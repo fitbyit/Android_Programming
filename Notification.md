@@ -23,7 +23,7 @@ private static final int NOTIFICATION_ID = 1;
 ```
 
 inside onCreate
-```
+```java
 btn = findViewById(R.id.btnGreet);
         txt = findViewById(R.id.etName);
 
