@@ -2,7 +2,7 @@
 
 1️⃣ activity_main.xml (Simple)
 
-<?xml version="1.0" encoding="utf-8"?>
+```<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,7 +24,7 @@
         android:text="Start"
         android:layout_marginTop="20dp"/>
 </LinearLayout>
-
+```
 
 ---
 
