@@ -108,7 +108,9 @@ public class MainActivity extends AppCompatActivity {
 
 3️⃣ AndroidManifest.xml (Only if Android 13+)
 
+```
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+```
 
 
 ---
