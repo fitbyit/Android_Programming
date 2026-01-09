@@ -30,6 +30,7 @@
 
 2️⃣ MainActivity.java (VERY SIMPLE)
 
+```java
 package com.example.simpleprogress;
 
 import android.app.NotificationChannel;
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         manager.notify(1, builder.build());
     }
 }
-
+````
 
 ---
 
