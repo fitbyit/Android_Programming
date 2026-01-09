@@ -174,6 +174,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -186,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
     double first_num = 0;
     String operator = "";
     boolean isNew = true;
+    double result = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -201,16 +203,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void NumberButton(View view) {
         Button btn = (Button) view;
-        txtResult.append(btn.getText().toString());
-        isNew= false;
         if(isNew){
-            txtResult.setText("");
+            txtResult.setText(btn.getText().toString());
+            isNew= false;
         }
     }
 
     public void op_button(View view) {
         Button btn = (Button) view;
         first_num = Double.parseDouble(txtResult.getText().toString());
+        txtResult.setText("");
         operator = btn.getText().toString();
         isNew = true;
     }
@@ -224,10 +226,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void answer(View view) {
         double second_num = Double.parseDouble(txtResult.getText().toString());
-        double result = 0;
+        Toast.makeText(MainActivity.this,  first_num + " " + operator + " " + second_num , Toast.LENGTH_LONG).show();
         switch (operator){
             case "+":
                 result = first_num + second_num;
+
                 break;
             case "-":
                 result = first_num - second_num;
@@ -243,11 +246,19 @@ public class MainActivity extends AppCompatActivity {
                     txtResult.setText("Error");
                     return;
                 }
-                txtResult.setText(String.valueOf(result));
-                isNew = true;
         }
+        txtResult.setText(String.valueOf(result));
+        isNew = true;
     }
 }
+
+
+
+
+
+
+
+
 ```
 
 
